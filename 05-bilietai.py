@@ -18,7 +18,5 @@ for i in range(mBilietas, nBilietas + 1):
     galas = i % 1000
     if pradzia == galas:
         kiekLaimingu += 1
-    else:
-        continue
 
 print(f"Laimingus bilietus isigijo {kiekLaimingu} keleiviu.")
