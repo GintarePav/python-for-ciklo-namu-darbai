@@ -12,6 +12,11 @@ paskutinisPuslapis = validuoti("Kokiu skaiciumi pazymetas paskutinis knygos pusl
 skaitmenuSkaicius = 0
 
 for i in range(1, paskutinisPuslapis + 1):
-    skaitmenuSkaicius += len(str(i))
+    if i < 10:
+        skaitmenuSkaicius += 1
+    elif i < 100:
+        skaitmenuSkaicius += 2
+    else:
+        skaitmenuSkaicius += 3
 
 print(f'Knygai sunumeruoti reikia {skaitmenuSkaicius} skaitmenų.')

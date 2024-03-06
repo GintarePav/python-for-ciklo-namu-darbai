@@ -2,7 +2,7 @@
 
 def validuoti(txt, num):
     skaicius = int(input(txt))
-    if skaicius > num and len(str(skaicius)) == 6:
+    if skaicius > num and 10 ** 5 <= skaicius < 10 ** 6:
         return skaicius
     else:
         print("Netinkamas skaičius, bandykite dar karta")
@@ -14,7 +14,9 @@ nBilietas = validuoti("Koks n-tojo bilieto šešiaženklis skaičius? ", mBiliet
 kiekLaimingu = 0
 
 for i in range(mBilietas, nBilietas + 1):
-    if str(i)[0:3] == str(i)[-3:]:
+    pradzia = i // 1000
+    galas = i % 1000
+    if pradzia == galas:
         kiekLaimingu += 1
     else:
         continue

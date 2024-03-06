@@ -11,9 +11,9 @@ viniesIlgis = validuoti("Koks vinies ilgis centimetrais? ")
 ikaltaCm = validuoti("Kiek centimetrų vinies stalius įkalė vienu smūgiu? ")
 viniesLikutis = viniesIlgis
 
-for i in range(1, 1000):
+for i in range(1, viniesIlgis + 1):
     viniesLikutis -= ikaltaCm
-    print(f'"Tuk!" {i}-asis smūgis, vinies liko dar {viniesLikutis} cm.')
-    if viniesLikutis <= 1:
-        print ("Vinis įkalta.")
-        break    
+    if viniesLikutis >= 0:
+        print(f'"Tuk!" {i}-asis smūgis, vinies liko dar {viniesLikutis} cm.')
+else:
+    print ("Vinis įkalta.")   
